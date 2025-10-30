@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISO 37001 - Certyfikacja Systemu Antykorupcyjnego</title>
+    <meta name="description" content="Certyfikacja systemu antykorupcyjnego ISO 37001 dla każdej organizacji dbającej o swój wizerunek i o wysokiej etyce biznesowej">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Certyfikacja ISO 37001">
+    <meta property="og:description" content="Certyfikacja systemu antykorupcyjnego ISO 37001 dla każdej organizacji dbającej o swój wizerunek i o wysokiej etyce biznesowej">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://iso-37001.pl/">
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://iso-37001.pl/wp-content/uploads/2024/09/cropped-LOGO-Multicert-FAVICON-32x32.png" sizes="32x32">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Roboto+Slab:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #002ac4;
+            --secondary-color: #00a99d;
+            --dark-color: #1a1919;
+            --text-color: #333333;
+            --light-gray: #f8f9fa;
+            --border-color: #e0e0e0;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+            --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.15);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background: #ffffff;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #0040ff 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-lg);
+            backdrop-filter: blur(10px);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            font-family: 'Roboto Slab', serif;
+            text-decoration: none;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary-color);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 70px;
+            background: linear-gradient(135deg, rgba(0, 42, 196, 0.95) 0%, rgba(0, 64, 255, 0.9) 100%),
+                        url('https://iso-37001.pl/wp-content/uploads/2024/09/ISO-37001.jpeg') center/cover;
+            color: white;
+            padding: 120px 2rem 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(0, 169, 157, 0.2) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+            animation: pulse 15s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            font-family: 'Roboto Slab', serif;
+            text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero p {
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: var(--shadow);
+        }
+
+        .btn-primary {
+            background: var(--secondary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #00c0b3;
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        .btn-secondary:hover {
+            background: var(--light-gray);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        section {
+            margin-bottom: 5rem;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 700;
+            margin-bottom: 2rem;
+            font-family: 'Roboto Slab', serif;
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
+            border-radius: 2px;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            transform: scaleX(0);
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .feature-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .feature-card h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--dark-color);
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        /* Benefits Section */
+        .benefits {
+            background: var(--light-gray);
+            padding: 4rem 2rem;
+            border-radius: 30px;
+            margin: 4rem 0;
+        }
+
+        .benefits-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .benefits-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 15px;
+            transition: var(--transition);
+        }
+
+        .benefit-item:hover {
+            transform: translateX(10px);
+            box-shadow: var(--shadow);
+        }
+
+        .benefit-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #0040ff 100%);
+            color: white;
+            padding: 5rem 2rem;
+            border-radius: 30px;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            color: white;
+        }
+
+        .contact-section h2::after {
+            background: white;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+        }
+
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-item-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .contact-item a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 3rem 2rem 2rem;
+            margin-top: 5rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: var(--secondary-color);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-section a:hover {
+            color: var(--secondary-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Quick Call Button */
+        .quick-call-button {
+            position: fixed;
+            right: 30px;
+            bottom: 30px;
+            z-index: 999;
+        }
+
+        .call-button {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            text-decoration: none;
+            box-shadow: var(--shadow-lg);
+            transition: var(--transition);
+            animation: pulse-ring 2s infinite;
+        }
+
+        .call-button:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes pulse-ring {
+            0%, 100% {
+                box-shadow: 0 0 0 0 rgba(0, 169, 157, 0.7);
+            }
+            50% {
+                box-shadow: 0 0 0 15px rgba(0, 169, 157, 0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 80px 1.5rem 60px;
+            }
+
+            main {
+                padding: 2rem 1rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .benefits {
+                padding: 2rem 1rem;
+                border-radius: 20px;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+
+        /* Animations */
+        @media (prefers-reduced-motion: no-preference) {
+            .feature-card,
+            .benefit-item {
+                opacity: 0;
+                animation: fadeInUp 0.6s ease-out forwards;
+            }
+
+            .feature-card:nth-child(1) { animation-delay: 0.1s; }
+            .feature-card:nth-child(2) { animation-delay: 0.2s; }
+            .feature-card:nth-child(3) { animation-delay: 0.3s; }
+            .feature-card:nth-child(4) { animation-delay: 0.4s; }
+            .feature-card:nth-child(5) { animation-delay: 0.5s; }
+            .feature-card:nth-child(6) { animation-delay: 0.6s; }
+        }
+
+        /* Cookie Notice */
+        .cookie-notice {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(26, 25, 25, 0.98);
+            color: white;
+            padding: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+            z-index: 9999;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .cookie-notice.hidden {
+            display: none;
+        }
+
+        .cookie-notice p {
+            margin: 0;
+            flex: 1;
+        }
+
+        .cookie-notice button {
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .cookie-notice button:hover {
+            background: #00c0b3;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="/" class="logo">
+                <span>🏆</span>
+                <span>Multicert</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about">O certyfikacji</a></li>
+                <li><a href="#benefits">Korzyści</a></li>
+                <li><a href="#process">Proces</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Certyfikacja ISO 37001</h1>
+            <p>System zarządzania antykorupcyjny dla organizacji dbających o swój wizerunek i wysoką etykę biznesową</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary">Skontaktuj się z nami</a>
+                <a href="#about" class="btn btn-secondary">Dowiedz się więcej</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- About Section -->
+        <section id="about">
+            <h2>Czym jest ISO 37001?</h2>
+            <p style="font-size: 1.15rem; line-height: 1.8; color: #666; max-width: 900px;">
+                ISO 37001 to międzynarodowa norma określająca wymagania i wytyczne dotyczące systemów zarządzania antykorupcyjnego.
+                Pomaga organizacjom w zapobieganiu, wykrywaniu i reagowaniu na korupcję oraz przestrzeganiu przepisów antykorupcyjnych.
+            </p>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Ochrona reputacji</h3>
+                    <p>Buduj zaufanie wśród klientów, partnerów i interesariuszy poprzez transparentne działania antykorupcyjne.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">⚖️</div>
+                    <h3>Zgodność prawna</h3>
+                    <p>Spełniaj wymagania prawne i regulacyjne dotyczące przeciwdziałania korupcji na rynkach lokalnych i międzynarodowych.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Przewaga konkurencyjna</h3>
+                    <p>Wyróżnij się na tle konkurencji dzięki certyfikowanemu systemowi zarządzania antykorupcyjnego.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Redukcja ryzyka</h3>
+                    <p>Minimalizuj ryzyko prawne i finansowe związane z korupcją oraz niewłaściwymi praktykami biznesowymi.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <h3>Kultura organizacyjna</h3>
+                    <p>Promuj etyczne zachowania i integralność w całej organizacji poprzez jasne polityki i procedury.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3>Uznanie międzynarodowe</h3>
+                    <p>Zyskaj międzynarodowe uznanie i zwiększ możliwości współpracy z partnerami globalnymi.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section id="benefits" class="benefits">
+            <div class="benefits-container">
+                <h2>Kluczowe korzyści certyfikacji</h2>
+                <div class="benefits-list">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">✓</div>
+                        <div>
+                            <h4>Wzmocnienie wizerunku</h4>
+                            <p>Poprawa reputacji firmy jako organizacji etycznej i transparentnej</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-item">
+                        <div class="benefit-icon">✓</div>
+                        <div>
+                            <h4>Dostęp do przetargów</h4>
+                            <p>Spełnienie wymagań uczestnictwa w międzynarodowych przetargach</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-item">
+                        <div class="benefit-icon">✓</div>
+                        <div>
+                            <h4>Skuteczne zarządzanie</h4>
+                            <p>Systematyczne podejście do identyfikacji i zarządzania ryzykiem korupcji</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-item">
+                        <div class="benefit-icon">✓</div>
+                        <div>
+                            <h4>Zwiększone zaufanie</h4>
+                            <p>Budowanie zaufania inwestorów, klientów i partnerów biznesowych</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-item">
+                        <div class="benefit-icon">✓</div>
+                        <div>
+                            <h4>Zgodność z przepisami</h4>
+                            <p>Łatwiejsze spełnianie wymogów regulacyjnych i prawnych</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-item">
+                        <div class="benefit-icon">✓</div>
+                        <div>
+                            <h4>Ochrona pracowników</h4>
+                            <p>Jasne procedury zgłaszania nieprawidłowości i ochrona sygnalistów</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section id="process">
+            <h2>Proces certyfikacji</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">1️⃣</div>
+                    <h3>Analiza wstępna</h3>
+                    <p>Ocena aktualnego stanu organizacji i identyfikacja luk w systemie zarządzania antykorupcyjnego.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">2️⃣</div>
+                    <h3>Wdrożenie</h3>
+                    <p>Opracowanie i wdrożenie polityk, procedur oraz szkoleń zgodnych z wymaganiami normy ISO 37001.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">3️⃣</div>
+                    <h3>Audyt certyfikacyjny</h3>
+                    <p>Przeprowadzenie niezależnego audytu przez akredytowaną jednostkę certyfikującą.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">4️⃣</div>
+                    <h3>Certyfikat</h3>
+                    <p>Uzyskanie certyfikatu ISO 37001 potwierdzającego zgodność systemu z międzynarodowymi standardami.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <h2>Skontaktuj się z nami</h2>
+            <p style="font-size: 1.15rem; margin-bottom: 2rem; opacity: 0.95;">
+                Jesteśmy gotowi pomóc Twojej organizacji w uzyskaniu certyfikacji ISO 37001
+            </p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-item-icon">📞</div>
+                    <a href="tel:+48730668341">+48 730 668 341</a>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-item-icon">✉️</div>
+                    <a href="mailto:kontakt@multicert.pl">kontakt@multicert.pl</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Multicert Sp. z o.o.</h3>
+                <p style="opacity: 0.8; line-height: 1.8;">
+                    Profesjonalna certyfikacja systemów zarządzania dla organizacji dbających o najwyższe standardy etyki biznesowej.
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Usługi</h3>
+                <ul>
+                    <li><a href="#">Certyfikacja ISO 37001</a></li>
+                    <li><a href="#">Audyty systemowe</a></li>
+                    <li><a href="#">Szkolenia antykorupcyjne</a></li>
+                    <li><a href="#">Doradztwo</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Firma</h3>
+                <ul>
+                    <li><a href="#">O nas</a></li>
+                    <li><a href="#">Akredytacje</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Dokumenty</h3>
+                <ul>
+                    <li><a href="#">Polityka prywatności</a></li>
+                    <li><a href="#">Regulamin</a></li>
+                    <li><a href="#">RODO</a></li>
+                    <li><a href="#">Pliki do pobrania</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Multicert Sp. z o.o. Wszelkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
+
+    <!-- Quick Call Button -->
+    <div class="quick-call-button">
+        <a href="tel:+48730668341" class="call-button" aria-label="Zadzwoń teraz" title="Zadzwoń: +48 730 668 341">
+            📞
+        </a>
+    </div>
+
+    <!-- Cookie Notice -->
+    <div class="cookie-notice" id="cookieNotice">
+        <p>Ta strona korzysta z ciasteczek aby świadczyć usługi na najwyższym poziomie. Dalsze korzystanie ze strony oznacza, że zgadzasz się na ich użycie.</p>
+        <button onclick="acceptCookies()">Zgoda</button>
+    </div>
+
+    <script>
+        // Cookie Notice
+        function acceptCookies() {
+            document.getElementById('cookieNotice').classList.add('hidden');
+            localStorage.setItem('cookiesAccepted', 'true');
+        }
+
+        // Check if cookies were already accepted
+        if (localStorage.getItem('cookiesAccepted') === 'true') {
+            document.getElementById('cookieNotice').classList.add('hidden');
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll animation for elements
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.feature-card, .benefit-item').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
