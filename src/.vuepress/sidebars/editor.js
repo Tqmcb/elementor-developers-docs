@@ -27,6 +27,7 @@ module.exports = [
       'page-settings-panel',
       'history-panel',
       'widgets-panel',
+      'browse-install-plugins',
     ]
   },
   {

@@ -21,3 +21,4 @@ The panel can be compared to a sideboard and its functionality will depend on wh
 * [Page Settings Panel](./page-settings-panel/)
 * [History Panel](./history-panel/)
 * [Widget Panel](./widgets-panel/)
+* [Browse and Install Plugins](./browse-install-plugins/)
