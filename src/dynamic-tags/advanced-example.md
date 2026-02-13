@@ -191,9 +191,10 @@ class Elementor_Dynamic_Tag_ACF_Average extends \Elementor\Core\DynamicTags\Tag 
 		}
 
 		foreach ( explode( ',', $fields ) as $index => $field_name ) {
+			$field_name = trim( $field_name );
 			$field = get_field( $field_name );
-			if ( (int) $field > 0 ) {
-				$sum += (int) $field;
+			if ( (float) $field > 0 ) {
+				$sum += (float) $field;
 				$count++;
 			}
 		}
