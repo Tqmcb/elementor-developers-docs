@@ -188,7 +188,16 @@ module.exports = {
       },
       {
         text: 'Blog',
-        link: 'https://developers.elementor.com/blog/',
+        items: [
+          {
+            text: 'Elementor Blog',
+            link: 'https://developers.elementor.com/blog/',
+          },
+          {
+            text: 'Residual Mix w Polsce',
+            link: '/blog/residual-mix-polska',
+          },
+        ],
       },
     ],
     sidebar: {
