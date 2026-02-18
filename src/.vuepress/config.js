@@ -222,6 +222,16 @@ module.exports = {
       '/theme-conditions/': themeConditionsSidebar,
       '/themes/': themeLocationsSidebar,
       '/widgets/': widgetsSidebar,
+      '/blog/': [
+        {
+          title: 'Blog',
+          collapsable: false,
+          children: [
+            '',
+            'residual-mix-polska',
+          ]
+        }
+      ],
     }
   },
 
